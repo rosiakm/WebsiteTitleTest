@@ -13,7 +13,7 @@ public class WebsiteTitleTest extends DriverSetUp {
     @ParameterizedTest
     @CsvFileSource(resources = "/data.csv")
     @Tag("Regression")
-    @DisplayName("Website title test")
+    @DisplayName("Website title tests")
     void websiteTitleTest(String websiteAddress, String expectedTitle){
         getDriver().get(websiteAddress);
         String actualTitle = getDriver().getTitle();
