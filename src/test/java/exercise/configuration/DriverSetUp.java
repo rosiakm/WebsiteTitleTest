@@ -15,18 +15,18 @@ public class DriverSetUp {
     }
 
     @BeforeAll
-    public static void setupDriver(){
+    public static void setupDriver() {
         WebDriverManager.chromedriver().setup();
     }
 
     @BeforeEach
-    public void setup(){
+    public void setup() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
     }
 
     @AfterEach
-    public void tearDown(){
+    public void tearDown() {
         driver.quit();
     }
 }
