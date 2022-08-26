@@ -10,7 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class DriverSetUp {
     private static WebDriver driver;
 
-    public static WebDriver getDriver() {
+    public WebDriver getDriver() {
         return driver;
     }
 
