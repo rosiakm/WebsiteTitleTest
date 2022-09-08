@@ -12,6 +12,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class WebsiteTitleTest extends DriverSetUp {
     private static Logger log = LoggerFactory.getLogger(WebsiteTitleTest.class);
+
     @ParameterizedTest(name = "{0} has been verified")
     @CsvFileSource(resources = "/data.csv")
     @Tag("Regression")

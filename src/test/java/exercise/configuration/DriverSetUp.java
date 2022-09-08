@@ -12,14 +12,17 @@ import org.slf4j.LoggerFactory;
 public class DriverSetUp {
     private static Logger log = LoggerFactory.getLogger(DriverSetUp.class);
     private WebDriver driver;
+
     public WebDriver getDriver() {
         return driver;
     }
+
     @BeforeAll
     public static void setupDriver() {
         WebDriverManager.chromedriver().setup();
         log.info("WebDriver started successfully");
     }
+
     @BeforeEach
     public void setup() {
         driver = new ChromeDriver();
@@ -27,6 +30,7 @@ public class DriverSetUp {
         driver.manage().window().maximize();
         log.info("Browser has been maximized");
     }
+
     @AfterEach
     public void tearDown() {
         driver.quit();
